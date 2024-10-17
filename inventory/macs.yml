@@ -1,0 +1,6 @@
+macs:
+  hosts:
+    mac.example.com:
+      ansible_host: localhost
+      ansible_user: {{ ansible_user }}
+      ansible_become: no

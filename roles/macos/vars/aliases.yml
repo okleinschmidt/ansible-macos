@@ -1,0 +1,13 @@
+fish_aliases:
+  - { alias: 'ls', command: 'lsd' }
+  - { alias: 'rssh', command: 'ssh -l root' }
+  - { alias: 'cls', command: 'clear' }
+  - { alias: 'grep', command: 'grep --color' }
+  - { alias: 'rmk', command: 'ssh-keygen -R' }
+  - { alias: 'root', command: 'sudo -sH' }
+  - { alias: 'lports', command: 'sudo lsof -n -i:$PORT | grep LISTEN' }
+  - { alias: 'dmesg', command: 'sudo dmesg' }
+  - { alias: 'tf', command: 'terraform' }
+  - { alias: 'mc', command: 'mc --nosubshell' }
+  - { alias: 'k', command: 'kubectl' }
+  - { alias: 'h', command: 'helm' }

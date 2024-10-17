@@ -1,0 +1,4 @@
+---
+fish_aliases_path: "/Users/{{ username }}/.config/fish/conf.d/aliases.fish"
+fish_aliases: true
+fish_aliases_extra: false

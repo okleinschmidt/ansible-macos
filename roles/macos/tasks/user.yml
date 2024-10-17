@@ -1,0 +1,19 @@
+---
+# Configure user
+# This task file configures the user account on macOS.
+
+# Change the shell to Fishshell.
+- name: Change shell
+  user:
+    name: "{{ username }}"
+    shell: /opt/homebrew/bin/fish
+  tags: user
+
+- name: Configure fish shell
+  ansible.builtin.template:
+    src: brew.fish.j2
+    dest: "/Users/{{ username }}/.config/fish/conf.d/brew.fish"
+    owner: "{{ username }}"
+    group: staff
+    mode: 0644
+  tags: user

@@ -1,0 +1,26 @@
+---
+- name: 'Tap Homebrew repository: natesales/repo'
+  homebrew_tap:
+    name: natesales/repo
+    url: https://github.com/natesales/repo
+  tags: software
+
+- name: Tap Homebrew repositories
+  homebrew_tap:
+    name: "{{ item }}"
+  with_items:
+    - derailed/k9s
+    - hidetatz/tap
+    - teamookla/speedtest
+    - vladimirvivien/oss-tools
+  tags: software
+
+- name: Install Homebrew Packages
+  homebrew:
+    name: "{{ packages }}"
+    state: present
+    upgrade_all: yes
+  environment: 
+    HOMEBREW_NO_COMPATIBILITY_WARNINGS: "1"
+  ignore_errors: true
+  tags: software

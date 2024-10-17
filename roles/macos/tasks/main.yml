@@ -1,0 +1,35 @@
+---
+# tasks file for roles/macos
+
+- include_vars: fishshell.yml
+- include_vars: aliases.yml
+- include_vars: packages.yml
+- include_vars: casks.yml
+
+
+- name: Preferences
+  include_tasks: preferences.yml
+  tags: preferences
+
+- name: Aliases
+  include_tasks: aliases.yml
+  tags: aliases
+
+- name: Software installation
+  include_tasks: software.yml
+  tags: software
+
+- name: User Preferences
+  include_tasks: user.yml
+  tags: user
+
+  #   include_tasks: preferences.yml
+  #   tags: preferences
+
+  # - name: Aliases
+  #   include_tasks: aliases.yml
+  #   tags: aliases
+
+  # - name: Software installation
+  #   include_tasks: software.yml    tags: software
+
